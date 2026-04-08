@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arbitrage Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Arbitrage Scanner</h1>
+
+    <div class="controls">
+        <label>Min Spread (%):</label>
+        <input id="minSpread" type="number" step="0.1" value="0">
+
+        <label>Sort by:</label>
+        <select id="sortField">
+            <option value="spread">Spread</option>
+            <option value="pair">Pair</option>
+            <option value="buy_exchange">Buy Exchange</option>
+            <option value="sell_exchange">Sell Exchange</option>
+        </select>
+
+        <label>Order:</label>
+        <select id="sortDesc">
+            <option value="true">Descending</option>
+            <option value="false">Ascending</option>
+        </select>
+
+        <button onclick="applySettings()">Apply</button>
+    </div>
+
+    <table id="results">
+        <thead>
+            <tr>
+                <th>Pair</th>
+                <th>Buy Exchange</th>
+                <th>Buy Price</th>
+                <th>Sell Exchange</th>
+                <th>Sell Price</th>
+                <th>Spread (%)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
